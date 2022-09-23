@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "HelveticaNC-Black";
+    src: url('../../../public/fonts/Helvetica Neue Condensed Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: "HelveticaNC-Bold";
+    src: url('../../../public/fonts/Helvetica Neue Condensed Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "HelveticaN-Roman";
+    src: url('../../../public/fonts/Helvetica Neuelt Roman.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "HelveticaN-Roman";
+}
+
