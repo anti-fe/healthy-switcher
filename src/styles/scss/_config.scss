@@ -1,3 +1,5 @@
+@import "_vars.scss";
+
 @font-face {
     font-family: "HelveticaNC-Black";
     src: url('../../../public/fonts/Helvetica Neue Condensed Black.ttf') format('truetype');
@@ -16,4 +18,15 @@
     box-sizing: border-box;
     font-family: "HelveticaN-Roman";
 }
-
+body {
+    background-color: $c-black;
+    overflow-x: hidden;
+}
+.cont {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    color: $c-black;
+}

@@ -1,0 +1,89 @@
+.main {
+    background-image: url('../../../public/img/first-screen-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    &__header {
+        @include flex(space-between, center, row);
+    }
+    .header {
+        position: relative;
+        &::after {
+            content: '';
+            height: 1px;
+            background-color: $c-secondary;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0.1;
+            transform: scaleX(3);
+            -webkit-transform: scaleX(3);
+            -moz-transform: scaleX(3);
+            -ms-transform: scaleX(3);
+            -o-transform: scaleX(3);
+        }
+        &__nav {
+            @include flex(space-between, center, row);
+            height: 90px;
+        }
+        &__nav-cont {
+            @include flex(space-between, center, row);
+            list-style-type: none;
+            height: 100%;
+            @media (max-width: 660px) {
+                display: none;
+            }
+        }
+        &__nav-item {
+            @include flex(space-between, center, row);
+            height: 100%;
+            &:not(:last-child) .header__nav-link {
+                margin-right: 45px;
+            }
+        }
+        &__nav-link {
+            @include flex(space-between,center,row);
+            @include text($c-secondary,$fs-14);
+            height: 100%;
+            font-family: "HelveticaNC-Bold";
+            transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            &:hover {
+                color: $c-accent;
+            }
+        }
+        &__burger {
+            cursor: pointer;
+            display: none;
+            position: relative;
+            height: 25px;
+            width: 35px;
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1.5px;
+                background-color: $c-secondary;
+            }
+            &::after {top: 0}
+            &::before {bottom: 0}
+            
+            @media (max-width: 660px) {
+                @include flex(center, center, row);
+            }
+        }
+        &__burger-line {
+            width: 100%;
+            height: 1.5px;
+            background-color: $c-secondary;
+        }
+        @media (max-width: 1150px) {
+            padding: 0 15px;
+        }
+        
+    }
+}
