@@ -2,7 +2,7 @@
     background-image: url('../../../public/img/first-screen-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     &__header {
         @include flex(space-between, center, row);
     }
@@ -71,7 +71,7 @@
             }
             &::after {top: 0}
             &::before {bottom: 0}
-            
+
             @media (max-width: 660px) {
                 @include flex(center, center, row);
             }
@@ -85,5 +85,83 @@
             padding: 0 15px;
         }
         
+    }
+    &__content {
+        @include flex(center, center, column);
+        margin: 80px 0;
+    }
+    &__title {
+        @include text($c-secondary, $fs-72);
+        letter-spacing: 0.1em;
+        text-align: center;
+        line-height: 84px;
+        margin-bottom: 50px;
+        &_light {
+            font-family: "HelveticaNC-Thin";
+            font-weight: 300;
+        }
+    }
+    &__description {
+        @include text($c-secondary, $fs-16);
+        font-family: "HelveticaN-Roman";
+        max-width: 580px;
+        opacity: 0.7;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: -0.2px;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        @include text($c-black,$fs-18);
+        font-family: "HelveticaNC-Bold";
+        padding: 25px 56px;
+        background-color: $c-accent;
+        border-radius: 43px;
+        -webkit-border-radius: 43px;
+        -moz-border-radius: 43px;
+        -ms-border-radius: 43px;
+        -o-border-radius: 43px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        transition: backgroundColor .2s ease;
+        -webkit-transition: backgroundColor .2s ease;
+        -moz-transition: backgroundColor .2s ease;
+        -ms-transition: backgroundColor .2s ease;
+        -o-transition: backgroundColor .2s ease;
+        &:hover {
+            background-color: #2EAB4E;
+        }
+        &:active {
+            outline: 3px solid #2eab4d9f;
+        }
+        &:focus {
+            outline: 3px solid #2eab4d9f;
+        }
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 123px;
+    }
+    &__info-block {
+        @include flex(center, center, column);
+        padding: 0 15px;
+    }
+    &__info-icon {
+        margin-bottom: 15px;
+    }
+    &__info-title, &__info-descr {
+        font-family: "HelveticaNC-Thin";
+        letter-spacing: 1.5px;
+    }
+    &__info-title {
+        @include text($c-secondary ,$fs-16);
+        line-height: 30px;
+    }
+    &__info-descr {
+        @include text(rgba(255, 255, 255, 0.5), $fs-16);
+        line-height: 30px;
     }
 }
