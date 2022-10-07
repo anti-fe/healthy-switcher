@@ -1,0 +1,91 @@
+.about {
+    padding: 100px 65px 90px;
+    background-color: $c-dark-gray;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    @include flex(center,center, column);
+    &__title {
+        @include text($c-secondary, $fs-30);
+        text-align: center;
+        margin-bottom: 60px;
+        line-height: 60px;
+        letter-spacing: 0.2em;
+        font-family: "HelveticaNC-Thin";
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: 'ABOUT';
+            @include text(#303030, 100px);
+            font-weight: 900;
+            line-height: 150px;
+            letter-spacing: 0.2em;
+            font-family: "HelveticaNC-Black";
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 160px);
+            z-index: -1;
+        }
+    }
+    &__descr {
+        max-width: 734px;
+        @include text(rgba(166, 166, 166, 1), $fs-16);
+        font-family: "HelveticaNC-Thin";
+        letter-spacing: 0.03em;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+.swiper {
+    width: 100%;
+    margin-top: 90px;
+    
+}
+.swiper-slide img {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+.swiper-slide {
+    text-align: center;
+}
+.swiper-button-next {
+    right: 25px;
+}
+.swiper-button-prev {
+    left: 25px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: none;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../../public/icons/arrow.svg);
+    background-color: #262626;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    border: 2px solid #303030;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (max-width: 524px) {
+        display: none;
+    }
+}
+.swiper-button-prev:after {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    &:hover {
+        background-color: #7a7a7a;
+    }
+}
+
