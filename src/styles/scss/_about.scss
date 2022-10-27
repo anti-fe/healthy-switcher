@@ -4,6 +4,9 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
     @include flex(center,center, column);
+    @media (max-width: 486px) {
+        padding: 100px 20px 90px;
+    }
     &__title {
         @include text($c-secondary, $fs-30);
         text-align: center;
@@ -24,6 +27,15 @@
             top: -50px;
             left: calc(50% - 160px);
             z-index: -1;
+            @media (max-width: 486px) {
+                top: -5px;
+                font-size: 90px;
+                line-height: 45px;
+            }
+        }
+        @media (max-width: 486px) {
+            margin-bottom: 20px;
+            line-height: 45px;
         }
     }
     &__descr {
@@ -38,7 +50,9 @@
 .swiper {
     width: 100%;
     margin-top: 90px;
-    
+    @media (max-width: 486px) {
+        margin-top: 40px;
+    }
 }
 .swiper-slide img {
     max-width: 100%;
@@ -101,4 +115,18 @@
         background-color: #7a7a7a;
     }
 }
-
+.swiper-pagination {
+    position: static;
+    margin-top: 10px;
+    @media (min-width: 525px) {
+        display: none;
+    }
+}
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: .6;
+}
+.swiper-pagination-bullet-active {
+    background-color: $c-accent;
+}

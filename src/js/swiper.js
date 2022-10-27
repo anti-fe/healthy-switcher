@@ -8,6 +8,11 @@ const swiper = new Swiper(slider, {
     autoHeight: true,
     speed: 400,
     spaceBetween: 34,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
