@@ -74,9 +74,22 @@
     height: 60px;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
     @media (max-width: 524px) {
         display: none;
     }
+}
+.swiper-button-next:hover.swiper-button-next:after, 
+.swiper-button-prev:hover.swiper-button-prev:after {
+    background-color: #303030;
+}
+.swiper-button-next:focus.swiper-button-next:after, 
+.swiper-button-prev:focus.swiper-button-prev:after {
+    background-color: #303030;
 }
 .swiper-button-prev:after {
     transform: rotate(180deg);

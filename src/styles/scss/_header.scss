@@ -89,6 +89,11 @@
     &__content {
         @include flex(center, center, column);
         margin: 80px 0;
+        @media (max-width: 724px) {
+            padding: 20px;
+            align-items: flex-start;
+            margin: 50px 0;
+        }
     }
     &__title {
         @include text($c-secondary, $fs-72);
@@ -99,6 +104,11 @@
         &_light {
             font-family: "HelveticaNC-Thin";
             font-weight: 300;
+        }
+        @media (max-width: 724px) {
+            text-align: left;
+            font-size: 48px;
+            line-height: 54px;
         }
     }
     &__description {
@@ -112,6 +122,9 @@
         text-align: center;
         letter-spacing: -0.2px;
         margin-bottom: 40px;
+        @media (max-width: 724px) {
+            text-align: left;
+        }
     }
     &__btn {
         @include text($c-black,$fs-18);
@@ -144,6 +157,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 123px;
+        @media (max-width: 776px) {
+            grid-template-columns: 1fr;
+        }
     }
     &__info-block {
         @include flex(center, center, column);
