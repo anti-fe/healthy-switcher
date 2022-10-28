@@ -1,4 +1,5 @@
 @import "_vars.scss";
+@import "_mixins.scss";
 
 @font-face {
     font-family: "HelveticaNC-Black";
@@ -33,4 +34,44 @@ body {
 a {
     text-decoration: none;
     color: $c-black;
+}
+.title {
+    @include text($c-secondary, $fs-30);
+    text-align: center;
+    margin: 90px 0;
+    line-height: 60px;
+    letter-spacing: 0.2em;
+    font-family: "HelveticaNC-Thin";
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 60px;
+        background-color: $c-accent;
+        bottom: -35px;
+        left: calc(100% - 50% - 30px);
+    }
+    &::before {
+        content: 'WORK';
+        @include text(#303030, 100px);
+        font-weight: 900;
+        line-height: 150px;
+        letter-spacing: 0.2em;
+        font-family: "HelveticaNC-Black";
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 160px);
+        z-index: -1;
+        @media (max-width: 486px) {
+            top: -5px;
+            font-size: 90px;
+            line-height: 45px;
+        }
+    }
+    @media (max-width: 486px) {
+        margin-bottom: 80px;
+        line-height: 45px;
+    }
 }

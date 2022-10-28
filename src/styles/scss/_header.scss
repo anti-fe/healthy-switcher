@@ -1,4 +1,5 @@
 .main {
+    padding-bottom: 1px;
     background-image: url('../../../public/img/first-screen-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,6 +8,7 @@
     }
     @media (max-width: 600px) {
         background-position: center;
+        padding-bottom: 0px;
     }
     .header {
         position: relative;

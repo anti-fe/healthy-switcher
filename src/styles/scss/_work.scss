@@ -1,0 +1,83 @@
+.work {
+    @media (max-width: 600px) {
+        padding: 0 20px;
+    }
+    &__cards-cont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 255px);
+        gap: 30px;
+        @media (max-width: 1178px) {
+            grid-template-columns: repeat(2, 364px);
+            grid-template-rows: repeat(2, 186px);
+            justify-content: center;
+        }
+        @media (max-width: 826px) {
+            grid-template-columns: repeat(2, 255px);
+        }
+        @media (max-width: 600px) {
+            grid-template-columns: minmax(150px, 360px);
+            grid-template-rows: auto;
+        }
+    }
+    &__card {
+        padding: 24px;
+        height: 100%;
+        background-color: $c-dark-gray;
+        transition: all .2s ease;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        &:hover {
+            scale: 1.05;
+            rotate: 2deg;
+            background-color: $c-accent;
+        }
+        &:hover .work__card-title {color: $c-dark-gray;}
+        &:hover .work__card-descr {color: $c-dark-gray;}
+        &:hover .work__card-title::after {background-color: #191919;}
+}
+    &__card-title {
+        @include text($c-secondary, 22px);
+        margin-bottom: 46px;
+        position: relative;
+        width: fit-content;
+        font-family: "HelveticaNC-Thin";
+        line-height: 26px;
+        letter-spacing: 1.5px;
+        transition: all .2s ease;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        &::after {
+            content: '';
+            background-color: rgba(146, 146, 146, 0.19);
+            width: 56px;
+            height: 2px;
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            transition: all .2s ease;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -ms-transition: all .2s ease;
+            -o-transition: all .2s ease;
+        }
+    }
+    &__card-descr {
+        @include text(rgba(255, 255, 255, 0.5), 14px);
+        line-height: 18px;
+        transition: all .2s ease;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+    }
+}
